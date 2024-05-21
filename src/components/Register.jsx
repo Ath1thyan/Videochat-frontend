@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import Footer from './Footer';
 
 const Register = () => {
     const [name, setName] = useState();
@@ -13,7 +14,7 @@ const Register = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         
-        axios.post( 'http://localhost:3001/register', {name, email, password})
+        axios.post( 'https://videochat-9x8g.onrender.com/register', {name, email, password})
         .then(result => {
             console.log(result);
             if(result.data === "Already registered"){
@@ -82,6 +83,7 @@ const Register = () => {
                     <Link to='/login' className="btn btn-secondary">Login</Link>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import VideoPlayer from './VideoPlayer';
 import Options from './Options';
 import Notifications from './Notifications';
+import Footer from './Footer';
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -49,6 +50,7 @@ const App = () => {
       <Options>
         <Notifications />
       </Options>
+      <Footer />
     </div>
   );
 };
