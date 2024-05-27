@@ -14,7 +14,7 @@ const Login = () => {
         event.preventDefault();
         
         try {
-            const result = await axios.post('https://videochat-9x8g.onrender.com/login', { email, password });
+            const result = await axios.post('http://localhost:3001/login', { email, password });
             console.log(result);
             if (result.data === "Success") {
                 console.log("Login Success");

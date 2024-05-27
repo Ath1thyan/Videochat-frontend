@@ -14,7 +14,7 @@ const Register = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         
-        axios.post( 'https://videochat-9x8g.onrender.com/register', {name, email, password})
+        axios.post('http://localhost:3001/register', {name, email, password})
         .then(result => {
             console.log(result);
             if(result.data === "Already registered"){

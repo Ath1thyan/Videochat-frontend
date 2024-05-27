@@ -4,7 +4,7 @@ import Peer from 'simple-peer';
 
 const SocketContext = createContext();
 
-const socket = io('https://videochat-9x8g.onrender.com', {
+const socket = io('https://localhost:5000', {
     transports: ['websocket', 'polling'], // Ensure these match your server's settings
     withCredentials: true
 });
